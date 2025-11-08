@@ -7,12 +7,10 @@ import { Header } from './src/components/Header';
 import { ImageUploader } from './src/components/ImageUploader';
 import { GeneratedImageGrid } from './src/components/GeneratedImageGrid';
 import { EditPanel } from './src/components/EditPanel';
-const imgSrc1 = "https://images.pexels.com/photos/1315655/pexels-photo-1315655.jpeg?auto=compress&cs=tinysrgb&";
-const imgSrc2 = "https://images.pexels.com/photos/1315655/pexels-photo-1315655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
 const App: React.FC = () => {
   const [originalImage, setOriginalImage] = useState<OriginalImage | null>(null);
-  const [generatedImages, setGeneratedImages] = useState<GeneratedImage[]>([ { id: imgSrc1, src: imgSrc1, isEditing: false, mimeType: 'image/jpeg' }, { id: imgSrc2, src: imgSrc2, isEditing: false, mimeType: 'image/jpeg' } ]);
+  const [generatedImages, setGeneratedImages] = useState<GeneratedImage[]>([]);
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [editPrompt, setEditPrompt] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
@@ -85,7 +83,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-base-100 flex flex-col">
       <Header />
-      <main className="flex-grow container mx-auto p-4 md:p-8">
+      <main className="container mx-auto p-4 md:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <aside className="lg:col-span-4 xl:col-span-3 space-y-6">
             <h2 className="text-xl font-bold text-content-100 border-b border-base-300 pb-2">Controls</h2>
@@ -105,7 +103,7 @@ const App: React.FC = () => {
                     </svg>
                     Generating...
                   </>
-                ) : "Generate Visualizations"}
+                ) : generatedImages.length > 0 ? "Re-generate" : "Generate Visualizations"}
               </button>
             )}
 

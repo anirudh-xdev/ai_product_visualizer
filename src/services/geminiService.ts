@@ -1,4 +1,3 @@
-import { GoogleGenAI, Modality, GenerateContentResponse } from "@google/genai";
 import type { OriginalImage } from "../../types";
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
@@ -8,23 +7,9 @@ if (!API_KEY) {
   );
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY! });
-const model = "gemini-2.5-flash-image";
-
 const fileToGenerativePart = (base64Data: string, mimeType: string) => ({
   inlineData: { data: base64Data, mimeType },
 });
-
-const extractImageFromResponse = (
-  response: GenerateContentResponse
-): string | null => {
-  for (const part of response.candidates?.[0]?.content?.parts || []) {
-    if (part.inlineData) {
-      return part.inlineData.data;
-    }
-  }
-  return null;
-};
 
 // Helper to delay polling
 const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));

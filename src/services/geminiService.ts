@@ -45,7 +45,7 @@ export const generateVisualizations = async (
     productImage.base64,
     productImage.mimeType
   );
-  const url = `http://localhost:3000/api/generate-image`;
+  const url = `${import.meta.env.VITE_APP_URL}/api/generate-image`;
 
   const prompts = [
     "Place this product onto a white coffee mug. The mug is on a wooden table in a bright, modern cafe. The product should be clearly visible and centered on the mug.",

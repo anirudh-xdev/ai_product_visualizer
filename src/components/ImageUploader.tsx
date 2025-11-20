@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import type { OriginalImage } from '../../types';
+import { UploadIcon } from 'lucide-react';
 
 interface ImageUploaderProps {
   onImageUpload: (file: File) => void;
@@ -65,11 +66,8 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload, ori
           onDragOver={handleDragOver}
           className="aspect-square w-full border-2 border-dashed border-base-400 rounded-xl flex flex-col items-center justify-center text-center p-8 cursor-pointer hover:border-brand-primary hover:bg-base-200 transition-all duration-200 bg-base-300 group"
         >
-          <div className="mb-4 p-4 rounded-full bg-linear-to-br from-brand-primary/10 to-brand-secondary/10 group-hover:from-brand-primary/20 group-hover:to-brand-secondary/20 transition-all duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-4-4V6a4 4 0 014-4h10a4 4 0 014 4v6a4 4 0 01-4 4H7z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m3-3H7" />
-            </svg>
+          <div className="mb-4 p-4 flex items-center justify-center rounded-full bg-linear-to-br from-brand-primary/10 to-brand-secondary/10 group-hover:from-brand-primary/20 group-hover:to-brand-secondary/20 transition-all duration-200">
+            <UploadIcon className="h-10 w-10 text-brand-primary" />
           </div>
           <p className="text-content-200 font-medium mb-1">
             <span className="font-semibold text-brand-primary">Click to upload</span> or drag and drop

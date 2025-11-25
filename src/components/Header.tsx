@@ -1,9 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router';
 
-export const Header: React.FC = () => {
+export function Header ({ className }: { className?: string }) {
   return (
-    <header className="border-b border-base-400 shadow-sm sticky top-0 z-40 backdrop-blur-sm bg-white/95">
+    <header className={`${className} border-b border-base-400 shadow-sm sticky top-0 z-40 backdrop-blur-sm bg-white/95`}>
       <div className="container mx-auto px-4 md:px-8 py-5 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
           <div className="p-2.5 bg-linear-to-br from-brand-primary via-brand-secondary to-brand-accent rounded-xl shadow-md">
@@ -13,7 +12,7 @@ export const Header: React.FC = () => {
           </div>
           <div>
             <h1 className="text-2xl font-bold text-content-100 tracking-tight">Omnexia AI</h1>
-            <p className="text-xs text-content-300 font-medium tracking-tight mt-1">Transform products with AI-powered visualizations</p>
+            <p className="text-xs text-content-300 font-medium tracking-tight mt-1 md:block hidden">Transform products with AI-powered visualizations</p>
           </div>
         </Link>
       </div>

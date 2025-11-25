@@ -82,8 +82,7 @@ export const ProductVisualizer: React.FC = () => {
   
   return (
     <div className="min-h-screen bg-base-200 flex flex-col animate-fadeIn">
-      <Header />
-      <main className="container mx-auto p-4 md:p-8 flex-1">
+      <main className="container mx-auto flex-1">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           <aside className="lg:col-span-4 xl:col-span-3 space-y-6">
             <div className="bg-white p-5 rounded-xl border border-base-400 shadow-sm">

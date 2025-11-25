@@ -54,7 +54,7 @@ export const LandingPage: React.FC = () => {
             <h1 className="text-xl font-bold text-content-100">AI Product Visualizer</h1>
           </div>
           <button
-            onClick={() => navigate('/app')}
+            onClick={() => navigate('/dashboard')}
             className="hidden md:flex items-center gap-2 px-6 py-2 bg-linear-to-r from-brand-primary to-brand-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Get Started
@@ -87,7 +87,7 @@ export const LandingPage: React.FC = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <button
-              onClick={() => navigate('/app')}
+              onClick={() => navigate('/dashboard')}
               className="group w-full sm:w-auto px-8 py-4 bg-linear-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-accent text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
               Start Creating Now
@@ -158,7 +158,7 @@ export const LandingPage: React.FC = () => {
               Join thousands of creators who are already using AI to bring their products to life
             </p>
             <button
-              onClick={() => navigate('/app')}
+              onClick={() => navigate('/dashboard')}
               className="group px-10 py-5 bg-linear-to-r from-brand-primary to-brand-secondary hover:from-brand-secondary hover:to-brand-accent text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 mx-auto"
             >
               Get Started Free

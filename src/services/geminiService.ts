@@ -33,9 +33,9 @@ async function pollTask(taskId: string, baseUrl: string): Promise<string> {
   }
 }
 
-export const generateVisualizations = async (
+export async function generateVisualizations (
   productImage: OriginalImage
-): Promise<string[]> => {
+): Promise<string[]> {
 
   const imagePart = fileToGenerativePart(
     productImage.base64,
@@ -77,10 +77,10 @@ export const generateVisualizations = async (
     .map((r) => r.value);
 };
 
-export const editImage = async (
+export async function editImage (
   image: { base64: string; mimeType: string },
   prompt: string
-): Promise<string> => {
+): Promise<string> {
   const imagePart = fileToGenerativePart(image.base64, image.mimeType);
 
   const response = await fetch(url, {

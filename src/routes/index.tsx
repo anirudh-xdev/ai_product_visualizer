@@ -3,7 +3,7 @@ import App from '../../App';
 import { lazy } from 'react';
 
 const ProductVisualizer = lazy(() => import('../components/imageGeneration/ProductVisualizer'));
-const ChatPage = lazy(() => import('../components/ChatPage'));
+const ChatPage = lazy(() => import('../components/ChatBot/ChatPage'));
 const AudioToolsPage = lazy(() => import('../components/AudioToolsPage'));
 const LandingPage = lazy(() => import('../components/LandingPage'));
 

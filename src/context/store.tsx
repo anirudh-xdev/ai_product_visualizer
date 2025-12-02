@@ -1,7 +1,7 @@
 import { create } from "zustand";
-import { ChatMessage, ChatRole, Content } from "../types";
-import { openRouterChat } from "../src/services/openRouter";
 import { fileToBase64 } from "../utils/fileUtils";
+import { ChatMessage, Content } from "@/types";
+import { openRouterChat } from "../services/openRouter";
 
 interface ChatState {
   messages: ChatMessage[];

@@ -2,8 +2,8 @@ import { useRef, useEffect } from "react";
 import { MessageSquare } from "lucide-react";
 import ChatInput from "./ChatInput";
 import ChatMessage from "./ChatMessage";
-import { useChatStore } from "../../../context/store";
 import { motion } from "framer-motion";
+import { useChatStore } from "../../context/store";
 
 export default function ChatPage() {
   const { messages, isTyping, sendMessage } = useChatStore();

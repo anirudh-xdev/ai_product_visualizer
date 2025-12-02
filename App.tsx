@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
-import { SidebarProvider, useSidebarContext } from "./context/contextProvider";
 import { Menu } from "lucide-react";
 import { lazy } from "react";
+import { SidebarProvider, useSidebarContext } from "./src/context/contextProvider";
 
 const Sidebar = lazy(() => import("./src/components/Sidebar"));
 const Header = lazy(() => import("./src/components/Header"));

@@ -1,8 +1,8 @@
 import React from 'react';
 import { ImageIcon, MessageSquare, Music } from 'lucide-react';
-import { useSidebarContext } from '../../context/contextProvider';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { lazy } from 'react';
+import { useSidebarContext } from '../context/contextProvider';
 
 interface NavItem {
   id: string;

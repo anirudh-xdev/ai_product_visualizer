@@ -1,8 +1,8 @@
 import React, { useState, useCallback, lazy } from 'react';
 import { GeneratedImage, OriginalImage } from '@/types';
 import { ButtonLoader } from '../Loader';
-import { fileToBase64 } from '../../../utils/fileUtils';
 import { editImage, generateVisualizations } from '../../../src/services/geminiService';
+import { fileToBase64 } from '../../utils/fileUtils';
 
 const ImageUploader = lazy(() => import('./ImageUploader'));
 const EditPanel = lazy(() => import('./EditPanel'));  
